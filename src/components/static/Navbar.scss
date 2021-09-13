@@ -1,6 +1,14 @@
-@import "./colours";
+@import "./variables";
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,300&display=swap");
+header {
+  position: sticky;
+  top: 0;
+}
+
+.left-align {
+  width: 65vw;
+}
+
 .navbar-container {
   height: calc(max(13vh, 40px));
   display: flex;
@@ -10,8 +18,10 @@
 }
 
 .navigation {
+  display: flex;
+  justify-content: space-evenly;
   padding: 1px 11px;
-  width: 65vw;
+  width: 30vw;
 }
 
 div.navigation > * {
@@ -30,7 +40,7 @@ div.navigation > * {
   margin: 0px calc(max(5px, 0.625vw));
 }
 
-img {
+.navbar-logo {
   height: calc(max(20px, 2.5vw));
   width: calc(max(20px, 2.5vw));
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
@@ -43,7 +53,6 @@ img {
 .contribute {
   font-size: 20px;
   font-weight: bold;
-  font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: black;
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);

@@ -1,0 +1,35 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: calc(max(13vh, 40px));
+  display: flex;
+  padding-left: (10.41vw);
+  align-items: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.25);
+  &:hover {
+    text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-evenly;
+}
+
+.footer-left-align {
+  width: 52vw;
+}
+.footer-logo {
+  height: calc(max(20px, 2.5vw));
+  width: calc(max(20px, 2.5vw));
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

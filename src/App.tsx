@@ -8,25 +8,27 @@ import Navbar from './components/Navbar';
 import Warshall from './components/Warshall';
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/floyd">
-            <Floyd />
-          </Route>
-          <Route path="/warshall">
-            <Warshall />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+				<Navbar />
+				<div className="main-content">
+					<Switch>
+						<Route path="/floyd">
+							<Floyd />
+						</Route>
+						<Route path="/warshall">
+							<Warshall />
+						</Route>
+						<Route path="/">
+							<Home />
+						</Route>
+					</Switch>
+				</div>
+				<Footer />
+			</Router>
+		</div>
+	);
 }
 
 export default App;

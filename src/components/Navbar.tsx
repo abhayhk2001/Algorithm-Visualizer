@@ -5,20 +5,23 @@ import "./static/Navbar.scss"
 
 function Navbar() {
 	return (
-		<div className="navbar-container">
-			<div className="logo"></div>
-			<div className="navigation">
-				<Link className="link" to='/'>Home</Link>
-				<Link to='/floyd'>Floyd's</Link>
-				<Link to='/warshall'>Warshall's</Link>
+		<header className="navbar-container">
+			<div className="left-align">
+				<div className="logo"></div>
+				<div className="navigation">
+					<Link className="link" to='/'>Home</Link>
+					<Link to='/floyd'>Floyd's</Link>
+					<Link to='/warshall'>Warshall's</Link>
+				</div>
 			</div>
+
 			<div className="github-logo">
-				<a href="https://github.com/abhayhk2001/Algorithm-Visualizer">
-					<img src={github_logo} alt="#" />
+				<a href="https://github.com/abhayhk2001/Algorithm-Visualizer" target="_blank" rel="noreferrer">
+					<img className="navbar-logo " src={github_logo} alt="#" />
 				</a>
 			</div>
-			<a href="https://github.com/abhayhk2001/Algorithm-Visualizer" className="contribute">Contribute</a>
-		</div>
+			<a href="https://github.com/abhayhk2001/Algorithm-Visualizer" className="contribute" target="_blank" rel="noreferrer">Contribute</a>
+		</header>
 	)
 }
 
