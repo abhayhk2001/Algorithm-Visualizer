@@ -10,8 +10,8 @@ function Navbar() {
 				<div className="logo"></div>
 				<div className="navigation">
 					<Link className="link" to='/'>Home</Link>
-					<Link to='/floyd'>Floyd's</Link>
 					<Link to='/warshall'>Warshall's</Link>
+					<Link to='/floyd'>Floyd's</Link>
 				</div>
 			</div>
 
