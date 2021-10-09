@@ -1,0 +1,29 @@
+@import "./variables";
+.row-col-form {
+  margin: 2vh 1vw;
+}
+
+.form-grp {
+  padding: 0 2vw;
+}
+
+.n-input {
+  width: clamp(10em, 20vw, 40em);
+  margin: 2vh 2vw;
+  height: 2em;
+}
+
+.form-submit {
+  margin: 2vh 2vw;
+  height: 2em;
+  width: clamp(8em, 10vw, 15em);
+  text-decoration: none;
+  background-color: $primary-color;
+  border: rgba(0, 0, 0, 0.75) 1px solid;
+  border-radius: 5px;
+  color: white;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

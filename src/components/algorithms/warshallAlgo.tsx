@@ -1,4 +1,4 @@
-function warshallalgo(adj: number[][]) {
+function warshallalgo(adj: number[][]): number[][][] {
   let R = [];
   let n = adj.length;
   console.log(n);

@@ -1,4 +1,5 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react'
+import "./static/RowColInput.scss"
 
 const RowColInput = forwardRef((props: any, ref) => {
 	const [n, setN] = useState('')
@@ -16,7 +17,7 @@ const RowColInput = forwardRef((props: any, ref) => {
 	}))
 	return (
 		<div className="row-col-form">
-			<form onSubmit={sendData}>
+			<form onSubmit={sendData} className="form-grp" >
 				<input
 					type="text"
 					onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,9 +30,9 @@ const RowColInput = forwardRef((props: any, ref) => {
 					value={n}
 					autoComplete="off"
 					disabled={disabled}
-					title="Number greater than or equal to 0"
+					title="Enter number greater than or equal to 0"
 				/>
-				<input type="submit" className="form-submit" disabled={disabled} />
+				<input value="Create Matrix" type="submit" className="form-submit" disabled={disabled} />
 			</form>
 		</div>
 	)

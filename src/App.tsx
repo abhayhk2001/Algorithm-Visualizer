@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Warshall from './components/Warshall';
+import AlgorithmBlock from './components/AlgorithmBlock';
+import 'codemirror/theme/dracula.css'
 
 function App() {
 	return (
@@ -14,6 +16,9 @@ function App() {
 				<Navbar />
 				<div className="main-content">
 					<Switch>
+						<Route path="/warshall/algorithm">
+							<AlgorithmBlock />
+						</Route>
 						<Route path="/floyd">
 							<Floyd />
 						</Route>

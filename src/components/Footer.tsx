@@ -1,7 +1,7 @@
 import React from 'react'
 import "./static/Footer.scss"
 import github_footer from "./resources/github_footer.svg"
-import instagram from "./resources/instagram.svg"
+import instagram from "./resources/medium.svg"
 import linkedin from "./resources/linkedin.svg"
 
 function Footer() {

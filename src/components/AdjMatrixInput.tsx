@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import _ from "lodash"
-import "./static/AdjucencyMatrix.scss"
+import "./static/AdjMatrixInput.scss"
 
 
 
-function AdjucencyMatrix(props: any) {
+function AdjMatrixInput(props: any) {
 	var n = props.n
 	const [adjMatrix, setAdjMatrix] = useState<any>()
 	const zeros = () => {
@@ -38,13 +38,20 @@ function AdjucencyMatrix(props: any) {
 	const cellInput = (colNum: number, rowNum: number) => {
 		return (
 			<>
-				<input key={"" + rowNum + colNum} onChange={handleChange} name={"" + rowNum + colNum} type="number" className="cell" />
+				<input key={`${rowNum.toString()}${colNum.toString()}`} onChange={handleChange} name={"" + rowNum + colNum} type="number" className="cell" style={{
+					marginRight: '1.25vw',
+					width: "clamp(2em, 5vw, 10em)"
+				}}
+				/>
 			</>
 		)
 	}
 	const rowInput = (num: number, rowNum: number) => {
 		return (
-			<div key={rowNum} className={`row${rowNum}`}>
+			<div key={`${rowNum.toString()}`} className={`row${rowNum}`}
+				style={
+					{ padding: '1vh 0' }
+				}>
 				{
 					_.times(num, (i) => (
 						cellInput(i, rowNum)
@@ -54,19 +61,19 @@ function AdjucencyMatrix(props: any) {
 		)
 	}
 	return (
-		<div className="adj-form">
-			<form onSubmit={storeData}>
-				<div className="adj-matrix">
+		<div key={"adj-form"} className="adj-form">
+			<form key={"form"} onSubmit={storeData}>
+				<div key={"Matrix"} className="adj-matrix">
 					{
 						_.times(props.n, (i) => (
 							rowInput(props.n, i)
 						))
 					}
 				</div>
-				{(props.n > 0) ? <input type="submit" /> : <></>}
+				{(props.n > 0) ? <input className="adj-form-submit" key={"submit-button"} type="submit" /> : <></>}
 			</form>
 		</div>
 	)
 }
 
-export default AdjucencyMatrix
+export default AdjMatrixInput
