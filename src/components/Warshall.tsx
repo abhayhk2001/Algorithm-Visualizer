@@ -5,7 +5,7 @@ import RowColInput from './RowColInput'
 import algo from "./algorithms/warshallAlgo"
 import Results from './Results'
 import makeUnWeighted from './utils/makeUnWeighted'
-import parseGraph from './utils/parseGraph'
+import parseUnWeightedGraph from './utils/parseUnWeightedGraph'
 import { Link } from "react-router-dom"
 
 
@@ -27,7 +27,7 @@ function Warshall() {
 				enableRef.current.enable();
 		var Adj = algo(adj)
 		setAdjSet(Adj)
-		setElements(parseGraph(Adj[Adj.length - 1]))
+		setElements(parseUnWeightedGraph(Adj[Adj.length - 1]))
 		setDisplayControl(2)
 	}
 

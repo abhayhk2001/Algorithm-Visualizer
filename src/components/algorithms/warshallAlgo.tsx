@@ -1,7 +1,6 @@
 function warshallalgo(adj: number[][]): number[][][] {
   let R = [];
   let n = adj.length;
-  console.log(n);
   R[R.length] = adj;
   for (let k = 0; k < n; k++) {
     let R1 = JSON.parse(JSON.stringify(R[k]));

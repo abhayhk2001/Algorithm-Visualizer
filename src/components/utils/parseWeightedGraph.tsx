@@ -18,7 +18,7 @@ type Edge = {
 	}
 }
 
-function parseGraph(adj: number[][]): Node[] | Edge[] {
+function parseWeightedGraph(adj: number[][]): Node[] | Edge[] {
 	//setting up the nodes
 	var elements: Node[] | Edge[] = []
 	var n = adj.length;
@@ -26,7 +26,6 @@ function parseGraph(adj: number[][]): Node[] | Edge[] {
 	var center_x = 325;
 	var center_y = 225;
 	var r = 100;
-	console.log(theta)
 	for (let i = 0; i < n; i++) {
 		let obj: Node = {}
 		obj.data = {
@@ -42,24 +41,14 @@ function parseGraph(adj: number[][]): Node[] | Edge[] {
 	//connecting the nodes
 	for (let i = 0; i < n; i++) {
 		for (let j = 0; j < n; j++) {
-			if (adj[i][j] === 1) {
+			if (adj[i][j] !== 0 && adj[i][j] !== Number.MAX_SAFE_INTEGER) {
 				let obj: Edge = {}
-				if (i !== j && adj[j][i] === 1) {
-					obj.data = {
-						source: i + 1,
-						target: j + 1,
-						//label: `Edge from ${(i + 1).toString()} to ${(j + 1).toString()}`
-						label: "",
-						type: "undirected"
-					}
-				}
-				else {
-					obj.data = {
-						source: i + 1,
-						target: j + 1,
-						// label: `Edge from ${(i + 1).toString()} to ${(j + 1).toString()}`
-						type: "directed"
-					}
+				obj.data = {
+					source: i + 1,
+					target: j + 1,
+					// label: `Edge from ${(i + 1).toString()} to ${(j + 1).toString()}`
+					label: `${adj[i][j]}`,
+					type: "directed"
 				}
 				elements.push(obj)
 			}
@@ -68,4 +57,4 @@ function parseGraph(adj: number[][]): Node[] | Edge[] {
 	return elements
 }
 
-export default parseGraph
+export default parseWeightedGraph

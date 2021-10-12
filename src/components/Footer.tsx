@@ -1,7 +1,7 @@
 import React from 'react'
 import "./static/Footer.scss"
 import github_footer from "./resources/github_footer.svg"
-import instagram from "./resources/medium.svg"
+import medium from "./resources/medium.svg"
 import linkedin from "./resources/linkedin.svg"
 
 function Footer() {
@@ -19,12 +19,12 @@ function Footer() {
 					</a>
 				</div>
 				<div>
-					<a href="https://github.com/abhayhk2001/Algorithm-Visualizer" target="_blank" rel="noreferrer">
-						<img className="footer-logo" src={instagram} alt="#" />
+					<a href="https://medium.com/@abhayhkashyap01" target="_blank" rel="noreferrer">
+						<img className="footer-logo" src={medium} alt="#" />
 					</a>
 				</div>
 				<div>
-					<a href="https://github.com/abhayhk2001/Algorithm-Visualizer" target="_blank" rel="noreferrer">
+					<a href="https://www.linkedin.com/in/abhay-h-kashyap/" target="_blank" rel="noreferrer">
 						<img className="footer-logo" src={linkedin} alt="#" />
 					</a>
 				</div>

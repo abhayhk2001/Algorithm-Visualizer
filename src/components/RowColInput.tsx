@@ -25,7 +25,7 @@ const RowColInput = forwardRef((props: any, ref) => {
 						setN(e.target.value);
 					}}
 					pattern="[0-9]{1,}"
-					placeholder="Number of nodes"
+					placeholder=" Number of nodes"
 					className="n-input"
 					value={n}
 					autoComplete="off"

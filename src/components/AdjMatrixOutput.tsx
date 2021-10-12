@@ -5,9 +5,10 @@ const rowOutput = (element: any) => {
 	return (
 		<tr>
 			{element.map((value: any) => {
-				return (<td>
-					{value}
-				</td>)
+				return (
+					<td>
+						{value !== Number.MAX_SAFE_INTEGER ? value : <span>&infin;</span>}
+					</td>)
 			})}
 		</tr>
 	)
