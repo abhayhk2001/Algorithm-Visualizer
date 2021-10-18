@@ -1,46 +1,16 @@
 import React, { useState } from 'react'
+import Gist from "react-gist"
 import './static/AlgorithmBlock.scss'
 
 function AlgorithmBlock(props: any) {
 	const [control,] = useState(props.state)
-	var warshall = `function warshallalgo(adj: number[][]): number[][][] {
-		let R = [];
-		let n = adj.length;
-		console.log(n);
-		R[R.length] = adj;
-		for (let k = 0; k < n; k++) {
-		  let R1 = JSON.parse(JSON.stringify(R[k]));
-		  for (let i = 0; i < n; i++) {
-			for (let j = 0; j < n; j++) {
-			  R1[i][j] = R1[i][j] || (R1[i][k] && R1[k][j]);
-			}
-		  }
-		  R[R.length] = R1;
-		}
-		return R;
-	  }`
-	var floyd = `function floydalgo(adj: number[][]): number[][][] {
-		let R = [];
-		let n = adj.length;
-		console.log(n);
-		R[R.length] = adj;
-		for (let k = 0; k < n; k++) {
-			let R1 = JSON.parse(JSON.stringify(R[k]));
-			for (let i = 0; i < n; i++) {
-				for (let j = 0; j < n; j++) {
-					R1[i][j] = Math.min(R1[i][j], (R1[i][k] + R1[k][j]));
-				}
-			}
-			R[R.length] = R1;
-		}
-		return R;
-	}`
 	return (
-		<pre>
-			<code>
-				{control === 0 ? warshall : floyd}
-			</code>
-		</pre>
+		<>
+			<div className="algorithmBlock">
+				<h2>Algorithm</h2>
+				{control === 0 ? <><Gist id="8b241da76a4eb2a7a42b0a6e82428b4c" /></> : <><Gist id="ee17c21fd0074bcd28819e6a2fad7027" /></>}
+			</div>
+		</>
 	)
 }
 
